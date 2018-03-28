@@ -2,8 +2,8 @@
 // Eduardo Callejas Marzo 2018
 function setup() {
   createCanvas(500, 500);
-	//red, orange, yellow, green, blue, indigo, violet
-
+	//red, orange, yellow, green, blue, indigo, violet (colores del arcoiris)
+	//crea primer "fountain" con colores del arcoiris
 		var t =
 		 {
 				 name: "test",
@@ -18,7 +18,7 @@ function setup() {
 				 shape: "ellipse2"
 		 };
 		 of = new Fountain(null, t);
-
+//segunda fuente, reflejo de la luz dentro del prisma
 		 var u =
  		 {
  				 name: "test",
@@ -38,20 +38,17 @@ function setup() {
 
 function draw() {
 	background(0);
-arcoiris();
+arcoiris(); //dibuja arcoiris
 	stroke(255);
 
 	fill(0);
 	strokeWeight(3);
-		line(0, height*(0.355+0.1563),height*(1/3+1/12),height*0.355);
+		line(0, height*(0.355+0.1563),height*(1/3+1/12),height*0.355); // Haz de luz 
 		strokeWeight(1);
-  triangle(2/3*height,1/2*height,1/3*height,1/2*height, 1/2*height, height*(1/2-1/6*sqrt(3)));
+  triangle(2/3*height,1/2*height,1/3*height,1/2*height, 1/2*height, height*(1/2-1/6*sqrt(3))); //prisma
+reflejo(); //crea reflejo dentro del prisma
 
-
-	uf.Draw();
-	uf.Create();
-	uf.Step();
-
+	
 
 
 
@@ -61,4 +58,12 @@ function arcoiris(){
   of.Draw();
   of.Create();
   of.Step();
+}
+
+function reflejo(){
+uf.Draw();
+	uf.Create();
+	uf.Step();
+
+
 }
