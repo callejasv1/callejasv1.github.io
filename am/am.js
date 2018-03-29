@@ -25,7 +25,7 @@ var theta = map(i,0,600,0,4*PI);
 amplitud=mouseY/300*ampsen*height/10;
 
 stroke(255);
-strokeWeight(3);
+strokeWeight(6);
 if(i>1){
 
 line(posx,posy,i,height/2+amplitud*sin(PI/frec*i+PI/frec*y));}
