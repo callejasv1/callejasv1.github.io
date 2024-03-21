@@ -107,10 +107,7 @@
               </div>
             </div>
         </div>
-        <div class="col-md-6 text-center">
-            <div id="app" style="min-height: 400px">
-                <!-- Webamp will attempt to center itself within this div -->
-            </div>
+       
         </div>
   </div>
 </div>
@@ -183,27 +180,7 @@
 <script src="assets/clippy/clippy.min.js"></script>    
     
     
-<script src="https://unpkg.com/webamp@1.4.0/built/webamp.bundle.min.js"></script>
-    <script>
-        const Webamp = window.Webamp;
-        new Webamp({
-            initialTracks: [{
-                metaData: {
-                    artist: "Callejas",
-                    title: "Intro"
-                },
-                url: "assets/01 - Intro.mp3",
-                duration: 223
-            }],
-        }).renderWhenReady(document.getElementById('app'));
-        
-        clippy.load('Clippy', function(agent) {
-            // Do anything with the loaded agent
-            agent.show();
-            
-            agent.speak('Welcome to Alex`s website!');
-        });
-    </script>    
+
 
 </body>
 </html>
